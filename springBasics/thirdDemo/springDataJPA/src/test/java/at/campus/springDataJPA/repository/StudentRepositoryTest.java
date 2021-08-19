@@ -2,6 +2,7 @@ package at.campus.springDataJPA.repository;
 
 import at.campus.springDataJPA.entity.Guardian;
 import at.campus.springDataJPA.entity.Student;
+import lombok.Data;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -53,8 +54,20 @@ class StudentRepositoryTest {
     }
 
     @Test
-    public void printAllStudentsByFirstName(String firstName) {
+    public void printAllStudentsByFirstName() {
         List<Student> students = studentRepository.findByFirstName("Alexander");
+        System.out.println("student: " + students);
+    }
+
+    @Test
+    public void printAllStudentsByFirstNameContaining() {
+        List<Student> students = studentRepository.findByFirstNameContaining("lex");
+        System.out.println("student: " + students);
+    }
+
+    @Test
+    public void printByGuardianName() {
+        List<Student> students = studentRepository.findByGuardianName("knight");
         System.out.println("student: " + students);
     }
 }
