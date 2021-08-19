@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -42,5 +44,17 @@ class StudentRepositoryTest {
                 .guardian(guardian)
                 .build();
         this.studentRepository.save(student);
+    }
+
+    @Test
+    public void printAllStudents() {
+        List<Student> studentList = studentRepository.findAll();
+        System.out.println("List of students: " + studentList);
+    }
+
+    @Test
+    public void printAllStudentsByFirstName(String firstName) {
+        List<Student> students = studentRepository.findByFirstName("Alexander");
+        System.out.println("student: " + students);
     }
 }
