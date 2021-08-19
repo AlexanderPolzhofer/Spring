@@ -70,4 +70,16 @@ class StudentRepositoryTest {
         List<Student> students = studentRepository.findByGuardianName("knight");
         System.out.println("student: " + students);
     }
+
+    @Test
+    public void findStudentByEmailId() {
+        Student student = studentRepository.findByEmailId("person@test.com");
+        System.out.println("student: " + student);
+    }
+
+    @Test
+    public void getStudentByEmailIdNativeQuery() {
+        Student student = studentRepository.getStudentByEmailIdNative("alexander@polzhofer.com");
+        System.out.println("student: " + student);
+    }
 }
