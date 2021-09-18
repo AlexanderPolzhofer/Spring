@@ -20,7 +20,9 @@ public class CourseMaterial {
     private String url;
 
     @OneToOne(
-            cascade = CascadeType.ALL
+            cascade = CascadeType.ALL,
+            optional = false
+
     )
     @JoinColumn(
             name = "course_id",

@@ -12,18 +12,18 @@ class CourseMaterialRepositoryTest {
     @Autowired
     private CourseMaterialRepository repository;
 
-    @Test
-    public void saveCourseMaterial() {
-        Course course = Course.builder()
-                .credit(25)
-                .title("football")
-                .build();
-
-        CourseMaterial courseMaterial = CourseMaterial.builder()
-                .course(course)
-                .url("www.football.com")
-                .build();
-        this.repository.save(courseMaterial);
-    }
+//    @Test
+//    public void saveCourseMaterial() {
+////        Course course = Course.builder()
+////                .credit(25)
+////                .title("football")
+////                .build();
+////
+////        CourseMaterial courseMaterial = CourseMaterial.builder()
+////                .course(course)
+////                .url("www.football.com")
+////                .build();
+////        this.repository.save(courseMaterial);
+////    }
 
 }
