@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>RESULT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>RESERVATION RESULT</h1>
+
+<p th:text="'from: ' + ${table.from}"/>
+<p th:text="'to: ' + ${table.to}"/>
+<p th:text="'Name: ' + ${table.personName}"/>
+<p th:text="'Number of people: ' + ${table.numberOfPeople}"/>
+
+<a href="/table">
+    <button> Submit another reservation</button>
+</a>
+</body>
+</html>
