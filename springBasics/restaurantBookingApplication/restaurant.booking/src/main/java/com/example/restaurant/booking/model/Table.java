@@ -1,9 +1,16 @@
 package com.example.restaurant.booking.model;
 
+import javax.persistence.*;
+
+@Entity(name = "t_table")
 public class Table {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "from_time")
     private Integer from;
+    @Column(name = "to_time")
     private Integer to;
     private String personName;
     private Integer numberOfPeople;
