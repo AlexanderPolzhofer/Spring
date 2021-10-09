@@ -13,7 +13,7 @@ public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @JsonIgnore
+//    @JsonIgnore
     private Integer id;
     private String name;
 
