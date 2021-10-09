@@ -7,7 +7,7 @@ public class Table {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
     @Column(name = "from_time")
     private Integer from;
     @Column(name = "to_time")
@@ -15,11 +15,11 @@ public class Table {
     private String personName;
     private Integer numberOfPeople;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
