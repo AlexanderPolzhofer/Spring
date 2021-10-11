@@ -16,7 +16,6 @@ public class TodoController {
     @Autowired
     private TodoRepository todoRepository;
 
-
     @PostMapping(value = "/post/todos", consumes = "application/json")
     public ResponseEntity submitTodo(@RequestBody Todo todo) {
         todoRepository.save(todo);
@@ -33,4 +32,11 @@ public class TodoController {
     public void deleteTodo(@PathVariable("id") Integer id) {
         todoRepository.deleteById(id);
     }
+
+    @PutMapping(value = "/put/todos", consumes = "application/json")
+    public Todo editTodo(@RequestBody Todo todoItem) {
+        Todo savedTodo = todoRepository.save(todoItem);
+        return savedTodo;
+    }
+
 }
